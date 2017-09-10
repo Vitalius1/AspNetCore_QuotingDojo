@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Welcome to QoutingDojo</h1>
+<form action="/quotes" method="post">
+    <table>
+        <tr>
+            <td>Your Name:</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Your Quote:</td>
+            <td><textarea name="quote" cols="30" rows="10"></textarea></td>
+        </tr>
+    </table>
+    <input type="submit" value="Add my quote!">
+</form>
+<form action="/quotes">
+    <input type="submit" value="Skip to Quotes!">
+</form>
+<br>
+<h4>@ViewBag.msg</h4>

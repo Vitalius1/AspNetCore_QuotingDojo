@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<a href="/">Home</a>
+<h1>Here are the awesome quotes!</h1>
+@foreach(var quote in @ViewBag.allQuotes)
+{
+    <p><q>@quote["content"]</q></p>
+    <blockquote>-@quote["creator"] at @quote["createdAt"].ToString("hh:mm tt MMMM dd, yyyy")</blockquote>
+    <hr>
+}
